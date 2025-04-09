@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appareils Apave - Metz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 1rem 0 0;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .category-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .category-card p {
+            font-weight: 500;
+            color: #0077cc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #004080;
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<script src="app.js"></script>
+
+<body>
+    <header>
+        <h1>Appareils Apave - Metz</h1>
+        <nav>
+            <ul>
+                <li><a href="thermometres.html">Thermomètre de contact</a></li>
+                <li><a href="multimetres.html">Multimètres</a></li>
+                <li><a href="cameras-thermiques.html">Caméras Thermiques</a></li>
+                <!-- Ajoute d'autres catégories ici -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="categories">
+            <h2>Types d'appareils</h2>
+            <div class="category-grid">
+                <a href="thermometres.html" class="category-card">
+                    <img src="images/thermometre.jpg" alt="Thermomètre de contact">
+                    <h3>Thermomètre de contact</h3>
+                    <p>Voir les Thermomètres</p>
+                </a>
+                <a href="EPI.html" class="category-card">
+                    <img src="images/epi.jpg" alt="EPI">
+                    <h3>EPI</h3>
+                    <p>Voir les équipements de protection</p>
+                </a>
+                <a href="mesureur-epaisseur.html" class="category-card">
+                    <img src="images/epaisseur.jpg" alt="Mesureur d'épaisseur">
+                    <h3>Mesureur d'épaisseur</h3>
+                    <p>Voir les mesureurs</p>
+                </a>
+                <a href="radiologie.html" class="category-card">
+                    <img src="images/radio.jpg" alt="Radiologie">
+                    <h3>Radiologie</h3>
+                    <p>Voir les appareils de radiologie</p>
+                </a>
+                <a href="Ultrasons.html" class="category-card">
+                    <img src="images/ultrasons.jpg" alt="Ultrasons">
+                    <h3>Ultrasons</h3>
+                    <p>Voir les appareils pour ultrasons</p>
+                </a>
+                <a href="Cale et gauge.html" class="category-card">
+                    <img src="images/cales.jpg" alt="Cales et gauges">
+                    <h3>Cales et gauges</h3>
+                    <p>Voir les cales et gauges</p>
+                </a>
+				<a href="magneto.html" class="category-card">
+                    <img src="images/magneto.jpg" alt="Magnetoscopie">
+                    <h3>Magnetoscopie</h3>
+                    <p>Voir les appareils de Magnetoscopies</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Apave Metz</p>
+    </footer>
+</body>
+</html>

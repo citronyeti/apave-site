@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnétoscopie - Apave Metz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Magnétoscopie - Apave Metz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="thermometres.html">Thermomètres</a></li>
+                <li><a href="cameras-thermiques.html">Caméras Thermiques</a></li>
+                <li><a href="magneto.html">Magnétoscopie</a></li>
+                <!-- Autres liens peuvent être ajoutés ici -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Liste des appareils de magnétoscopie</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>Pince magnétoscopique Mat-con (Mat42)</h3>
+                <ul>
+                    <li>N° série : 184011</li>
+                    <li>Batterie N° série : 242013</li>
+                    <li>Validité : 26/07/2024 au 25/07/2025</li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h3>Pince magnétoscopique filaire Electro Spect</h3>
+                <ul>
+                    <li>N° série : 9260</li>
+                    <li>Validité : 15/09/2023 au 14/09/2024</li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h3>Pince magnétoscopique filaire Magneflux Y6</h3>
+                <ul>
+                    <li>N° série : 20714</li>
+                    <li>Validité : 27/12/2021 (à compléter)</li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h3>Croix de Berthold (N° Apave : 301005376)</h3>
+                <ul>
+                    <li>N° série : 16-061</li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h3>Croix de Berthold (N° Apave : 301005377)</h3>
+                <ul>
+                    <li>N° série : 16-068</li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h3>Mesureur de champ magnétique Babb-co MDC1n</h3>
+                <ul>
+                    <li>N° Apave : 102000803</li>
+                    <li>N° série : 333</li>
+                    <li>Validité : 25/09/2023 au 24/09/2024</li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h3>Mesureur de champ Diverse Magmeter</h3>
+                <ul>
+                    <li>N° série : 2832</li>
+                    <li>Validité : 25/07/2024 au 24/07/2025</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Apave Metz</p>
+    </footer>
+</body>
+</html>

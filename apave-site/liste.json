@@ -1,0 +1,17 @@
+[
+  {
+    "nom": "Pince magnétoscopique Mat-con (Mat42)",
+    "details": {
+      "no_serie": "184011",
+      "batterie_no_serie": "242013",
+      "validite": "26/07/2024 au 25/07/2025"
+    }
+  },
+  {
+    "nom": "Pince magnétoscopique filaire Electro Spect",
+    "details": {
+      "no_serie": "9260",
+      "validite": "15/09/2023 au 14/09/2024"
+    }
+  }
+]

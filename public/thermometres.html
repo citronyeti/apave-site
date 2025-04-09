@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermomètre de contact - Apave Metz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 1rem 0 0;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .device-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .device-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .device-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .device-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #004080;
+        }
+
+        .validity {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #004080;
+            color: white;
+            margin-top: 3rem;
+        }
+		.form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .form-container button {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .form-container button:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Thermomètre de contact - Apave Metz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="EPI.html">EPI</a></li>
+                <li><a href="cameras-thermiques.html">Caméras Thermiques</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Liste des Thermomètres de contact</h2>
+        <div class="device-list">
+            <div class="device-card">
+                <div class="device-name">THCT-39</div>
+                <div class="validity">Validité : 26/07/2024 → 25/07/2025</div>
+            </div>
+            <div class="device-card">
+                <div class="device-name">THCT-40</div>
+                <div class="validity">Validité : 26/07/2024 → 25/07/2025</div>
+            </div>
+            <div class="device-card">
+                <div class="device-name">THCT-41</div>
+                <div class="validity">Validité : 14/11/2024 → 13/11/2025</div>
+            </div>
+            <div class="device-card">
+                <div class="device-name">THCT-42</div>
+                <div class="validity">Validité : à renseigner</div>
+            </div>
+            <div class="device-card">
+                <div class="device-name">THCT-44</div>
+                <div class="validity">Validité : à renseigner</div>
+            </div>
+            <!-- Ajoute d'autres appareils ici -->
+			 <section class="form-container">
+            <h2>Ajouter un appareil</h2>
+            <form id="appareil-form">
+                <label for="name">Nom de l'appareil :</label>
+                <input type="text" id="name" name="name" required placeholder="Nom de l'appareil">
+
+                <label for="serie">Numéro de série :</label>
+                <input type="text" id="serie" name="serie" required placeholder="Numéro de série">
+
+                <label for="validite">Validité :</label>
+                <input type="text" id="validite" name="validite" placeholder="Validité de l'appareil">
+
+                <button type="submit">Ajouter l'appareil</button>
+            </form>
+        </section>
+
+        <section class="categories">
+            <h2>Appareils disponibles</h2>
+            <div id="appareils-list" class="category-grid">
+                <!-- Liste des appareils ajoutés ici -->
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Apave Metz</p>
+    </footer>
+	<script>
+        const appareilForm = document.getElementById("appareil-form");
+        const appareilsList = document.getElementById("appareils-list");
+
+        appareilForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const serie = document.getElementById("serie").value;
+            const validite = document.getElementById("validite").value;
+
+            const appareilCard = document.createElement("a");
+            appareilCard.classList.add("category-card");
+
+            appareilCard.innerHTML = `
+                <h3>${name}</h3>
+                <p>Série: ${serie}</p>
+                <p>Validité: ${validite}</p>
+            `;
+
+            appareilsList.appendChild(appareilCard);
+
+            appareilForm.reset();
+        });
+    </script>
+</body>
+</html>
+
